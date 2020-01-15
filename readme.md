@@ -1,7 +1,10 @@
 # Xamarin Themes
-This Xamarin.Forms example demonstrates app thmemes!
+This Xamarin.Forms example demonstrates app themes!
 
 We'll show you how to manually select app themes and automatically switch to dark theme based on system settings using Xamarin.Forms.
+
+Good news is coming soon! Though this feature is not apart of Xamarin.Essentials (v1.3), it should be available in v1.4 according to [Pull Request 923](https://github.com/xamarin/Essentials/issues/923) and [Enhancement 923](https://github.com/xamarin/Essentials/issues/923).
+
 
 ## Themes
 * 1 - Graphite-Lite
