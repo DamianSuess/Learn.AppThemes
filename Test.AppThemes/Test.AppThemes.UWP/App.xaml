@@ -1,0 +1,14 @@
+﻿<!--
+  Copyright Xeno Innovations, Inc. 2020
+  * Date:    2020-1-15
+  * Author:  Damian Suess
+  * File:    App.xaml
+  * Description:
+  *
+-->
+
+<Application xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="using:Test.AppThemes.UWP"
+             x:Class="Test.AppThemes.UWP.App"
+             RequestedTheme="Light" />

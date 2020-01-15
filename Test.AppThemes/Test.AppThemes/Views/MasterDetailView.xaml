@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  Copyright Xeno Innovations, Inc. 2020
+  * Date:    2020-1-15
+  * Author:  Damian Suess
+  * File:    MasterDetailView.xaml
+  * Description:
+  *
+-->
+
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:prism="http://prismlibrary.com"
+                  x:Class="Test.AppThemes.Views.MasterDetailView"
+                  prism:ViewModelLocator.AutowireViewModel="True">
+
+  <MasterDetailPage.Master>
+    <ContentPage Title="Menu">
+      <StackLayout Padding="20">
+        <!--  TODO: // Update the Layout and add some real menu items  -->
+        <Button Command="{Binding NavigateCommand}"
+                CommandParameter="ViewA"
+                Text="ViewA" />
+      </StackLayout>
+    </ContentPage>
+  </MasterDetailPage.Master>
+</MasterDetailPage>
