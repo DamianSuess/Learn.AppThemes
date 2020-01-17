@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  Copyright Xeno Innovations, Inc. 2020
+  * Date:    2020-1-15
+  * Author:  Damian Suess
+  * File:    SettingsView.xaml
+  * Description:
+  *
+-->
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             x:Class="Test.AppThemes.Views.SettingsView"
+             prism:ViewModelLocator.AutowireViewModel="True">
+  <StackLayout Margin="15" VerticalOptions="CenterAndExpand">
+    <Switch IsToggled="True" />
+  </StackLayout>
+</ContentPage>

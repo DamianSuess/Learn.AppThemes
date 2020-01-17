@@ -37,14 +37,15 @@ namespace Test.AppThemes
     {
       InitializeComponent();
 
-      await NavigationService.NavigateAsync("NavigationPage/MainPage");
+      await NavigationService.NavigateAsync($"{nameof(NavigationPage)}/{nameof(DashboardView)}");
     }
 
     protected override void RegisterTypes(IContainerRegistry containerRegistry)
     {
       containerRegistry.RegisterForNavigation<NavigationPage>();
-      containerRegistry.RegisterForNavigation<DashboardView, MainPageViewModel>();
+      containerRegistry.RegisterForNavigation<DashboardView, DashboardViewModel>();
       containerRegistry.RegisterForNavigation<MasterDetailView, MasterDetailViewModel>();
+      containerRegistry.RegisterForNavigation<SettingsView, SettingsViewModel>();
     }
   }
 }
