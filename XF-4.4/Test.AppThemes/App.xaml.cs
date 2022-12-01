@@ -37,7 +37,11 @@ namespace Test.AppThemes
     {
       InitializeComponent();
 
-      await NavigationService.NavigateAsync($"{nameof(NavigationPage)}/{nameof(DashboardView)}");
+      var ret = await NavigationService.NavigateAsync($"{nameof(NavigationPage)}/{nameof(DashboardView)}");
+      if (!ret.Success)
+      {
+        System.Diagnostics.Debugger.Break();
+      }
     }
 
     protected override void RegisterTypes(IContainerRegistry containerRegistry)

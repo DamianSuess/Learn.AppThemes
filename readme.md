@@ -74,7 +74,10 @@ Author: [Damian Suess](https://www.linkedin.com/in/damiansuess/)
 
 ## Resources
 
-* Theme Colors - https://electronjs.org/apps/marktext
+* [Theme an Application](https://learn.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/theming/theming)
+* [Respond to Theme Changes](https://learn.microsoft.com/en-us/xamarin/xamarin-forms/user-interface/theming/system-theme-changes)
+* Theme Colors
+  * https://electronjs.org/apps/marktext
   * https://github.com/marktext/marktext
   * https://marktext.app/
 
