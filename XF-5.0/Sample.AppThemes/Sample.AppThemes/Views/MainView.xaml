@@ -4,8 +4,10 @@
              x:Class="Sample.AppThemes.Views.MainView"
              Title="{Binding Title}">
 
-    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Label Text="Welcome to Xamarin Forms and Prism!" />
-    </StackLayout>
-
+  <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+    <Label Text="App Info:" FontAttributes="Bold" />
+    <Label Text="{Binding AppName, StringFormat='Name: {0}'}" />
+    <Label Text="{Binding AppPackageName, StringFormat='Package Name: {0}'}" />
+    <Label Text="{Binding AppTheme, StringFormat='Theme: {0}'}" />
+  </StackLayout>
 </ContentPage>
