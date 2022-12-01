@@ -28,6 +28,7 @@ namespace Sample.AppThemes
 
       containerRegistry.RegisterForNavigation<NavigationPage>();
       containerRegistry.RegisterForNavigation<MainView, MainViewModel>();
+      containerRegistry.RegisterForNavigation<ThemedView, ThemedViewModel>();
     }
   }
 }

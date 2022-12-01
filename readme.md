@@ -8,56 +8,81 @@ Author: [Damian Suess](https://www.linkedin.com/in/damiansuess/)
 
 ## Themes
 
-* 1 - Graphite-Lite
-* 1 - One-Dark
-* 4 - Material-Dark - only use the blue links for ``One-Dark``
-
-## Xamarin.Forms v4.x
-
-Though this feature is not apart of Xamarin.Essentials (v1.3), it should be available in v1.4 according to [Pull Request 923](https://github.com/xamarin/Essentials/issues/923) and [Enhancement 923](https://github.com/xamarin/Essentials/issues/923).
-
-Normally, I just piecemeal parts of my larger projects but since Xamarin.Essentials is offering this feature soon, I'll try and use their naming conventions so the transition is smoother!
+![Screen Shot](ScreenShot.png)
 
 ## Sample Colors
 
-### Dark Theme 1
+### Light Theme - Detailed
 
-| Name    | Hex     | Color|
-|---------|---------|------|
-| BGColor | #282c34 |  |
-| Links   | #409eff |  |
-| Text    |         |  |
-
-### Dark Theme 2
-
-| Name                | Hex     | Usage |
-|---------------------|---------|-------|
-| Title Bar           | 2f3849  | Header ribbon bar
-| Background          | 1e2532  | Background
-| Primary             | 242b3a  | Frames
-| Actions             | 509ceb  | Button faces, links, actionable items (combo down arrow)
-| Control Borders     | 656a75  | Control box border
-| CheckBox Checked Bg   | 339cf2
-| CheckBox Unchecked Bg | 283040
-| Text                | ffffff  | Text Color
-| Text H1             | ffffff  | Text Color
-| Text H2             | bec0c4  |
-| Text H3             |
+| Name                          | Hex     | Usage |
+|-------------------------------|---------|-------|
+| Navigation Bar                | #7e7d81 | Header Navigation Bar Background
+| Navigation Bar Text           | #ffffff | Header Navigation Bar Text
+| Page Background               | White   | Background
+| Primary                       | 242b3a  | Frames
+| Actions                       | 509ceb  | Button faces, links, actionable items (combo down arrow)
+| Control Borders               | 656a75  | Control box border
+| CheckBox Checked Bg           | 339cf2
+| CheckBox Unchecked Bg         | 283040
+| Text                          | ffffff  | Text Color
+| Text H1                       | ffffff  | Text Color
+| Text H2                       | bec0c4  |
+| Text H3                       |
 | Tab A Selected Bg             | 3a4457  | Optional Selected Tab Item Background
 | Tab B Selected Text Bg        | `transparent`  |
 | Tab B Selected Text Fg        | ffffff (Bold)  |
 | Tab B Selected Bottom Border  | 339cf2 |
 | Tab B Unselected Text Fg      | 3a4457  | Optional Selected Tab Item Background
-| ListView Background | 283040  | Background of List box
-| ListView Row A      | 283040  | Darker row color
-| ListView Row B      | 2f3849  | Lighter row color
-| ListView Selected Bg | 27415e
+| ListView Background           | 283040  | Background of List box
+| ListView Row A                | 283040  | Darker row color
+| ListView Row B                | 2f3849  | Lighter row color
+| ListView Selected Bg          | 27415e
+
+### Dark Theme - Detailed
+
+| Name                          | Hex     | Usage |
+|-------------------------------|---------|-------|
+| Navigation Bar                | 1e2532 | Header Navigation Bar Background
+| Navigation Bar Text           | 2f3849 | Header Navigation Bar Text
+| Background                    | 1e2532 | Background
+| Primary                       | 242b3a | Frames
+| Actions                       | 509ceb | Button faces, links, actionable items (combo down arrow)
+| Control Borders               | 656a75 | Control box border
+| CheckBox Checked Bg           | 339cf2
+| CheckBox Unchecked Bg         | 283040
+| Text                          | ffffff | Text Color
+| Text H1                       | ffffff | Text Color
+| Text H2                       | bec0c4 |
+| Text H3                       |
+| Tab A Selected Bg             | 3a4457 | Optional Selected Tab Item Background
+| Tab B Selected Text Bg        | `transparent`
+| Tab B Selected Text Fg        | ffffff (Bold)
+| Tab B Selected Bottom Border  | 339cf2 |
+| Tab B Unselected Text Fg      | 3a4457 | Optional Selected Tab Item Background
+| ListView Background           | 283040 | Background of List box
+| ListView Row A                | 283040 | Darker row color
+| ListView Row B                | 2f3849 | Lighter row color
+| ListView Selected Bg          | 27415e
+
+### Dark Theme - Simple
+
+| Name    | Hex     |
+|---------|---------|
+| BGColor | #282c34 |
+| Links   | #409eff |
+| Text    |         |
 
 ## Resources
 
 * Theme Colors - https://electronjs.org/apps/marktext
   * https://github.com/marktext/marktext
   * https://marktext.app/
+
+## For Older Xamarin.Forms v4.x
+
+Though this feature is not apart of Xamarin.Essentials (v1.3), it should be available in v1.4 according to [PR 927](https://github.com/xamarin/Essentials/pull/927) and [Enhancement 923](https://github.com/xamarin/Essentials/issues/923).
+
+Normally, I just piecemeal parts of my larger projects but since Xamarin.Essentials is offering this feature soon, I'll try and use their naming conventions so the transition is smoother!
 
 ### Methods for theming
 

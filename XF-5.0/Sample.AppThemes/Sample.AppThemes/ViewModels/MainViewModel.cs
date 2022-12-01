@@ -1,4 +1,6 @@
-﻿using Prism.Navigation;
+﻿using Prism.Commands;
+using Prism.Navigation;
+using Sample.AppThemes.Views;
 using Xamarin.Essentials;
 
 namespace Sample.AppThemes.ViewModels
@@ -10,6 +12,16 @@ namespace Sample.AppThemes.ViewModels
     {
       Title = "Main Page";
     }
+
+    public DelegateCommand CmdSubPage => new DelegateCommand(async () =>
+    {
+      await NavigationService.NavigateAsync(nameof(MainView));
+    });
+
+    public DelegateCommand CmdThemedPage => new DelegateCommand(async () =>
+    {
+      await NavigationService.NavigateAsync(nameof(ThemedView));
+    });
 
     public string AppName => AppInfo.Name;
 
