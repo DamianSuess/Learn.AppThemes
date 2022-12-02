@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sample.AppThemes.Views.MainView"
+             Title="{Binding Title}">
+
+  <ContentPage.Resources>
+    <Color x:Key="LocalLightPrimaryColor">WhiteSmoke</Color>
+    <Color x:Key="LocalLightSecondaryColor">Black</Color>
+    <Color x:Key="LocalLightActionColor">#509ceb</Color>
+    <Color x:Key="LocalLightActionTextColor">#FFFFFF</Color>
+
+    <!-- Dark colors -->
+    <Color x:Key="LocalDarkPrimaryColor">#2F3849</Color>
+    <Color x:Key="LocalDarkSecondaryColor">#FFFFFF</Color>
+    <Color x:Key="LocalDarkActionColor">#509ceb</Color>
+    <Color x:Key="LocalDarkActionTextColor">#FFFFFF</Color>
+
+    <Style x:Key="LocalButtonStyle"
+           TargetType="Button">
+      <Setter Property="BackgroundColor"
+              Value="{AppThemeBinding Light={StaticResource LocalLightActionColor}, Dark={StaticResource LocalDarkActionColor}}" />
+      <Setter Property="TextColor"
+              Value="{AppThemeBinding Light={StaticResource LocalLightActionTextColor}, Dark={StaticResource LocalDarkActionTextColor}}" />
+      <Setter Property="HeightRequest" Value="45" />
+      <Setter Property="WidthRequest" Value="190" />
+      <Setter Property="CornerRadius" Value="18" />
+    </Style>
+  </ContentPage.Resources>
+
+  <StackLayout HorizontalOptions="CenterAndExpand"
+               VerticalOptions="StartAndExpand"
+               Margin="20" >
+
+    <StackLayout Orientation="Horizontal">
+      <Button Text="Sub-Page" Command="{Binding CmdSubPage}" />
+      <Button Text="Themed Page" Command="{Binding CmdThemedPage}" />
+    </StackLayout>
+    <!--
+    Only new instances get the OS applied theme. Even then, it's not 100% accurate.
+    -->
+    <Grid>
+      <StackLayout>
+        <Label Text="NOTE: This page uses the App Background. Click, 'Themed Page' for a fully dynamic theme page." />
+        <Label Text="" />
+
+        <Label Text="--=[ Default System Styles ]=--" FontSize="Medium" />
+        <Label Text="NOTE: This App Background and Text colors do not cleanly switch with system changes" />
+        
+        <Label Text="App Info:" FontAttributes="Bold" />
+        <Label Text="{Binding AppName, StringFormat='Name: {0}'}" />
+        <Label Text="{Binding AppPackageName, StringFormat='Package Name: {0}'}" />
+        <Label Text="{Binding AppTheme, StringFormat='Theme: {0}'}" />
+        <Label Text="" />
+      </StackLayout>
+    </Grid>
+
+    <!--
+    Setting unique colors for each control that dynamically get applied on theme change
+    Note:
+      On theme change, the App's background doesn't always transition on Android v10.
+      Thus when changing to to Dark theme, the BG can be left White while the text color changes to White 
+    -->
+    <Grid>
+      <StackLayout>
+        <Label TextColor="{AppThemeBinding Light=Black, Dark=White}" Text="--=[ AppThemeBindings - Hard-Coded ]=--" FontSize="Medium" />
+        <Label TextColor="{AppThemeBinding Light=Black, Dark=White}" Text="App Info:" FontAttributes="Bold" />
+        <Label TextColor="{AppThemeBinding Light=Black, Dark=White}" Text="{Binding AppName, StringFormat='Name: {0}'}" />
+        <Label TextColor="{AppThemeBinding Light=Black, Dark=White}" Text="{Binding AppPackageName, StringFormat='Package Name: {0}'}" />
+        <Label TextColor="{AppThemeBinding Light=Black, Dark=White}" Text="{Binding AppTheme, StringFormat='Theme: {0}'}" />
+        <Label Text="" />
+      </StackLayout>
+    </Grid>
+
+    <!--
+      Enforcing a background and text color ensures correct transitions.
+    -->
+    <Grid BackgroundColor="{AppThemeBinding Light={StaticResource LocalLightPrimaryColor}, Dark={StaticResource LocalDarkPrimaryColor}}">
+      <StackLayout>
+        <Label TextColor="{AppThemeBinding Light={StaticResource LocalLightSecondaryColor}, Dark={StaticResource LocalDarkSecondaryColor}}" Text="--=[ AppThemeBindings - StaticResource ]=--" FontSize="Medium" />
+        <Label TextColor="{AppThemeBinding Light={StaticResource LocalLightSecondaryColor}, Dark={StaticResource LocalDarkSecondaryColor}}" Text="App Info:" FontAttributes="Bold" />
+        <Label TextColor="{AppThemeBinding Light={StaticResource LocalLightSecondaryColor}, Dark={StaticResource LocalDarkSecondaryColor}}" Text="{Binding AppName, StringFormat='Name: {0}'}" />
+        <Label TextColor="{AppThemeBinding Light={StaticResource LocalLightSecondaryColor}, Dark={StaticResource LocalDarkSecondaryColor}}" Text="{Binding AppPackageName, StringFormat='Package Name: {0}'}" />
+        <Label TextColor="{AppThemeBinding Light={StaticResource LocalLightSecondaryColor}, Dark={StaticResource LocalDarkSecondaryColor}}" Text="{Binding AppTheme, StringFormat='Theme: {0}'}" />
+        <Button Text="Dummy Button" Style="{StaticResource LocalButtonStyle}" />
+
+      </StackLayout>
+    </Grid>
+
+  </StackLayout>
+</ContentPage>

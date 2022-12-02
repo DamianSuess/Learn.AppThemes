@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Sample.AppThemes.Views.ThemedView"
+             Title="{Binding Title}"
+             BackgroundColor="{AppThemeBinding Light={StaticResource LightPageBackgroundColor}, Dark={StaticResource DarkPageBackgroundColor}}">
+  <StackLayout HorizontalOptions="CenterAndExpand"
+               VerticalOptions="StartAndExpand"
+               Margin="20" >
+    <!--
+      Enforcing a background and text color ensures correct transitions.
+    -->
+    <Grid BackgroundColor="{AppThemeBinding Light={StaticResource LightPrimaryColor}, Dark={StaticResource DarkPrimaryColor}}">
+      <StackLayout>
+        <Label Style="{StaticResource MediumLabelStyle}" Text="--=[ AppThemeBindings - StaticResource ]=--" FontSize="Medium" />
+        <Label Style="{StaticResource SmallLabelStyle}" Text="App Info:" FontAttributes="Bold" />
+        <Label Style="{StaticResource SmallLabelStyle}" Text="{Binding AppName, StringFormat='Name: {0}'}" />
+        <Label Style="{StaticResource SmallLabelStyle}" Text="{Binding AppPackageName, StringFormat='Package Name: {0}'}" />
+        <Label Style="{StaticResource SmallLabelStyle}" Text="{Binding AppTheme, StringFormat='Theme: {0}'}" />
+
+        <Button Text="Button Inside Grid" Style="{StaticResource ButtonStyle}" />
+
+      </StackLayout>
+    </Grid>
+
+    <Button Text="Button Outside Grid" Style="{StaticResource ButtonStyle}" />
+
+  </StackLayout>
+</ContentPage>

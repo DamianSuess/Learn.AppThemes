@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33103.184
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.AppThemes", "Sample.AppThemes\Sample.AppThemes\Sample.AppThemes.csproj", "{5E90DFEC-E9D5-46FB-9120-5BA23F5CFF75}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Sample.AppThemes", "XF-5.0-AutomaticThemes\Sample.AppThemes\Sample.AppThemes.csproj", "{5E90DFEC-E9D5-46FB-9120-5BA23F5CFF75}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.AppThemes.Android", "Sample.AppThemes\Sample.AppThemes.Android\Sample.AppThemes.Android.csproj", "{62E06A61-FF38-4EA9-911B-CA0CC260EA38}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.AppThemes.Android", "XF-5.0-AutomaticThemes\Sample.AppThemes.Android\Sample.AppThemes.Android.csproj", "{62E06A61-FF38-4EA9-911B-CA0CC260EA38}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.AppThemes.UWP", "Sample.AppThemes\Sample.AppThemes.UWP\Sample.AppThemes.UWP.csproj", "{EBDE6FCE-3FA9-41B3-AB74-FED4340E3146}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.AppThemes.UWP", "XF-5.0-AutomaticThemes\Sample.AppThemes.UWP\Sample.AppThemes.UWP.csproj", "{EBDE6FCE-3FA9-41B3-AB74-FED4340E3146}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Platforms", "Platforms", "{903BBBFF-836F-4326-9DB9-6EFE2D97EC5F}"
 EndProject
