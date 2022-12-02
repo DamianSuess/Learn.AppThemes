@@ -10,6 +10,15 @@ Author: [Damian Suess](https://www.linkedin.com/in/damiansuess/)
 
 ![Screen Shot](ScreenShot.png)
 
+### Android
+
+Make sure that the Android `Activity` (i.e. `MainActivity.cs`) includes `ConfigChanges.UiMode` so that automatic changes can be made.
+
+```cs
+  [Activity(Theme = "@style/MainTheme",
+            ConfigurationChanges = ConfigChanges.UiMode | ...
+```
+
 ## Sample Colors
 
 ### Light Theme - Detailed
